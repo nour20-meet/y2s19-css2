@@ -9,11 +9,29 @@ body {
     text-align: center;
     font-size: 32pt;
     padding: 10px;
+    animation-name: bouncea;
+    animation-duration: 2s;
 }
 
 svg {
     position: absolute;
     left: calc(50% - 50px);
     top: calc(50% - 50px);
+    animation-name: Ball_up;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
+@keyframes Ball_up{
+	0%{transform: translate(0px, 0px);}
+	50%{transform: translate(0px, -300px);}
+	100%{transform: translate(0px, 0px);}
+}
+
+
+@keyframes bouncea{
+	from {font-size: 10%;
+		  opacity: 0;}
+	to {font-size: 320%;
+		opacity: 1;}
+}
